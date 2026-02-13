@@ -632,7 +632,12 @@
             <p class="subtitle">60 minutes where you'll learn exactly where you're losing money and how to change it</p>
 
             <div class="form-wrapper">
-                <form id="contactForm">
+                <form id="contactForm" name="contact-en" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact-en" />
+                    <p style="display: none;">
+                        <label>Don't fill this out: <input name="bot-field" /></label>
+                    </p>
+
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required placeholder="John Smith">
@@ -700,7 +705,7 @@
                     </div>
                     <div class="contact-item">
                         <div class="icon">📧</div>
-                        <a href="mailto:rberecki@gmail.com">rberecki@gmail.com</a>
+                        <a href="/cdn-cgi/l/email-protection#f98b9b9c8b9c9a9290b99e94989095d79a9694"><span class="__cf_email__" data-cfemail="91e3f3f4e3f4f2faf8d1f6fcf0f8fdbff2fefc">[email&#160;protected]</span></a>
                     </div>
                     <div class="contact-item">
                         <div class="icon">📍</div>
@@ -716,7 +721,7 @@
         <p>&copy; 2024 Visuals | Rafał Berecki</p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -751,12 +756,4 @@
                 `Message: ${formData.message}`
             );
             
-            window.location.href = `mailto:rberecki@gmail.com?subject=${subject}&body=${body}`;
-            
-            alert('Thank you! The form will open your email client.');
-            this.reset();
-        });
-    </script>
-
-</body>
-</html>
+       

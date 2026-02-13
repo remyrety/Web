@@ -571,7 +571,13 @@
             <p class="subtitle">60 minut, w którym dowiesz się dokładnie, gdzie tracisz pieniądze i jak to zmienić</p>
 
             <div class="form-wrapper">
-                <form id="contactForm">
+                <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Anti-spam hidden field -->
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p style="display: none;">
+                        <label>Nie wypełniaj tego pola: <input name="bot-field" /></label>
+                    </p>
+
                     <div class="form-group">
                         <label for="name">Imię i Nazwisko *</label>
                         <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
