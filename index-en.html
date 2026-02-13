@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Visuals | Rafał Berecki - AI Implementation & Business Automation</title>
+    <meta name="description" content="You see how AI is changing the market. Don't want to fall behind. I help business owners implement technology that gives them an edge - without risk and chaos.">
+    <meta name="keywords" content="AI implementation, business automation, cloud solutions, digital transformation, business intelligence, process automation, AI consultant">
+    <meta name="author" content="Rafał Berecki">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://berecki.com/en">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://berecki.com/en">
+    <meta property="og:title" content="Visuals | Rafał Berecki - AI Implementation & Business Automation">
+    <meta property="og:description" content="You see how AI is changing the market. I help business owners implement technology that gives them competitive advantage.">
+    <meta property="og:image" content="https://berecki.com/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://berecki.com/en">
+    <meta property="twitter:title" content="Visuals | Rafał Berecki - AI Implementation & Business Automation">
+    <meta property="twitter:description" content="You see how AI is changing the market. I help business owners implement technology that gives them competitive advantage.">
+    <meta property="twitter:image" content="https://berecki.com/og-image.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Alternate Language -->
+    <link rel="alternate" hreflang="pl" href="https://berecki.com/">
+    <link rel="alternate" hreflang="en" href="https://berecki.com/en">
+    <link rel="alternate" hreflang="x-default" href="https://berecki.com/">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Visuals - Rafał Berecki",
+      "image": "https://berecki.com/og-image.png",
+      "@id": "https://berecki.com",
+      "url": "https://berecki.com",
+      "telephone": "+48609112480",
+      "email": "rberecki@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lublin",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.2465,
+        "longitude": 22.5684
+      },
+      "sameAs": [
+        "https://linkedin.com/in/rafal-berecki"
+      ],
+      "priceRange": "$$",
+      "description": "AI implementation and business automation for companies. Cloud solutions, process automation, and business intelligence."
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary-color: #00D2FF;
+            --bg-dark: #0a1628;
+            --card-bg: rgba(15, 30, 50, 0.6);
+            --text-white: #ffffff;
+            --text-muted: #8b9bb4;
+        }
+
+        body {
+            background-color: #050A14;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(0, 114, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 210, 255, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(18, 28, 54, 0.4) 0%, #050A14 70%);
+            color: var(--text-white);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .bg-3d {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 70%;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.7;
+        }
+
+        .bg-3d::before {
+            content: '';
+            position: absolute;
+            top: 15%;
+            right: 5%;
+            width: 700px;
+            height: 700px;
+            background: url('data:image/svg+xml,<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="starGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%2300D2FF" stop-opacity="0.9"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0.6"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><radialGradient id="starCore"><stop offset="0%" stop-color="%23ffffff" stop-opacity="1"/><stop offset="50%" stop-color="%2300D2FF" stop-opacity="0.8"/><stop offset="100%" stop-color="%230072FF" stop-opacity="0"/></radialGradient></defs><g opacity="0.3"><circle cx="120" cy="80" r="1" fill="%23ffffff" opacity="0.4"/><circle cx="580" cy="120" r="1" fill="%23ffffff" opacity="0.5"/><circle cx="200" cy="180" r="0.8" fill="%2300D2FF" opacity="0.3"/><circle cx="450" cy="90" r="1" fill="%23ffffff" opacity="0.4"/><circle cx="320" cy="150" r="0.8" fill="%2300D2FF" opacity="0.4"/><circle cx="150" cy="250" r="1" fill="%23ffffff" opacity="0.3"/><circle cx="520" cy="200" r="0.8" fill="%2300D2FF" opacity="0.5"/><circle cx="280" cy="300" r="1" fill="%23ffffff" opacity="0.4"/><circle cx="600" cy="280" r="1" fill="%23ffffff" opacity="0.3"/><circle cx="180" cy="420" r="0.8" fill="%2300D2FF" opacity="0.4"/><circle cx="480" cy="380" r="1" fill="%23ffffff" opacity="0.5"/><circle cx="350" cy="480" r="1" fill="%23ffffff" opacity="0.3"/><circle cx="220" cy="550" r="0.8" fill="%2300D2FF" opacity="0.4"/><circle cx="540" cy="520" r="1" fill="%23ffffff" opacity="0.4"/></g><g filter="url(%23glow)"><circle cx="200" cy="120" r="5" fill="url(%23starCore)"/><circle cx="200" cy="120" r="3" fill="%23ffffff"/><circle cx="260" cy="140" r="4" fill="url(%23starCore)"/><circle cx="260" cy="140" r="2.5" fill="%23ffffff"/><circle cx="280" cy="200" r="4" fill="url(%23starCore)"/><circle cx="280" cy="200" r="2.5" fill="%23ffffff"/><circle cx="240" cy="220" r="3.5" fill="url(%23starCore)"/><circle cx="240" cy="220" r="2" fill="%2300D2FF"/><circle cx="180" cy="240" r="4.5" fill="url(%23starCore)"/><circle cx="180" cy="240" r="2.8" fill="%23ffffff"/><circle cx="140" cy="260" r="4" fill="url(%23starCore)"/><circle cx="140" cy="260" r="2.5" fill="%23ffffff"/><circle cx="100" cy="290" r="4.5" fill="url(%23starCore)"/><circle cx="100" cy="290" r="2.8" fill="%23ffffff"/><path d="M200,120 L260,140 L280,200 L240,220 M240,220 L180,240 L140,260 L100,290" stroke="%2300D2FF" stroke-width="1.5" opacity="0.4" fill="none"/></g><g filter="url(%23glow)"><circle cx="450" cy="280" r="6" fill="url(%23starCore)"/><circle cx="450" cy="280" r="4" fill="%23ffffff"/><circle cx="320" cy="240" r="5" fill="url(%23starCore)"/><circle cx="320" cy="240" r="3" fill="%2300D2FF"/><circle cx="480" cy="250" r="4" fill="url(%23starCore)"/><circle cx="480" cy="250" r="2.5" fill="%23ffffff"/><circle cx="380" cy="260" r="4" fill="url(%23starCore)"/><circle cx="380" cy="260" r="2.5" fill="%2300D2FF"/><path d="M450,280 L480,250 M450,280 L420,300 L380,280 M380,260 L320,240" stroke="%2300D2FF" stroke-width="1.5" opacity="0.5" fill="none"/></g><g filter="url(%23glow)"><circle cx="520" cy="400" r="8" fill="url(%23starCore)"/><circle cx="520" cy="400" r="5" fill="%23ffaa00"/><circle cx="520" cy="400" r="15" fill="%23ffaa00" opacity="0.1"/></g><g filter="url(%23glow)"><circle cx="420" cy="480" r="6" fill="url(%23starCore)"/><circle cx="420" cy="480" r="4" fill="%2300D2FF"/></g><g filter="url(%23glow)" opacity="0.6"><circle cx="580" cy="180" r="5" fill="url(%23starCore)"/><circle cx="580" cy="180" r="3" fill="%23ffcc00"/><circle cx="600" cy="160" r="4.5" fill="url(%23starCore)"/><circle cx="600" cy="160" r="2.8" fill="%23ffffff"/><line x1="580" y1="180" x2="600" y2="160" stroke="%2300D2FF" stroke-width="1" opacity="0.4"/></g><path d="M520,400 L420,480 L320,240 Z" stroke="%2300D2FF" stroke-width="0.8" opacity="0.15" fill="none" stroke-dasharray="4,4"/><text x="20" y="680" font-family="Poppins" font-size="11" fill="%2300D2FF" opacity="0.4">27.04.1990 • 23:00 • Lublin</text><text x="150" y="200" font-family="Poppins" font-size="9" fill="%2300D2FF" opacity="0.3">URSA MAJOR</text><text x="420" y="320" font-family="Poppins" font-size="9" fill="%2300D2FF" opacity="0.3">LEO</text><text x="530" y="430" font-family="Poppins" font-size="9" fill="%23ffaa00" opacity="0.4">Arcturus</text></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: rotateFloat 30s ease-in-out infinite;
+            mix-blend-mode: screen;
+            mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+            -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+        }
+
+        .bg-3d::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="networkGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%2300D2FF" stop-opacity="0.15"/><stop offset="100%" stop-color="%230072FF" stop-opacity="0.05"/></linearGradient></defs><line x1="100" y1="150" x2="300" y2="250" stroke="%2300D2FF" stroke-width="0.5" opacity="0.2"/><line x1="300" y1="250" x2="500" y2="200" stroke="%2300D2FF" stroke-width="0.5" opacity="0.2"/><line x1="500" y1="200" x2="700" y2="300" stroke="%2300D2FF" stroke-width="0.5" opacity="0.2"/><line x1="700" y1="300" x2="850" y2="180" stroke="%2300D2FF" stroke-width="0.5" opacity="0.2"/><line x1="200" y1="400" x2="400" y2="450" stroke="%230072FF" stroke-width="0.5" opacity="0.15"/><line x1="400" y1="450" x2="600" y2="420" stroke="%230072FF" stroke-width="0.5" opacity="0.15"/><line x1="600" y1="420" x2="800" y1="500" stroke="%230072FF" stroke-width="0.5" opacity="0.15"/><circle cx="100" cy="150" r="3" fill="%2300D2FF" opacity="0.4"/><circle cx="300" cy="250" r="3" fill="%2300D2FF" opacity="0.4"/><circle cx="500" cy="200" r="3" fill="%2300D2FF" opacity="0.5"/><circle cx="700" cy="300" r="3" fill="%2300D2FF" opacity="0.4"/><circle cx="850" cy="180" r="3" fill="%2300D2FF" opacity="0.4"/><circle cx="200" cy="400" r="3" fill="%230072FF" opacity="0.3"/><circle cx="400" cy="450" r="3" fill="%230072FF" opacity="0.3"/><circle cx="600" cy="420" r="3" fill="%230072FF" opacity="0.4"/><circle cx="800" cy="500" r="3" fill="%230072FF" opacity="0.3"/><circle cx="250" cy="150" r="1.5" fill="%2300D2FF" opacity="0.5"/><circle cx="450" cy="280" r="1.5" fill="%2300D2FF" opacity="0.5"/><circle cx="650" cy="380" r="1.5" fill="%230072FF" opacity="0.4"/><circle cx="550" cy="550" r="1.5" fill="%230072FF" opacity="0.4"/><circle cx="350" cy="600" r="1.5" fill="%2300D2FF" opacity="0.5"/></svg>');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            animation: networkPulse 20s ease-in-out infinite;
+        }
+
+        @keyframes rotateFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.7; }
+            33% { transform: translateY(-30px) rotate(3deg) scale(1.02); opacity: 0.8; }
+            66% { transform: translateY(-15px) rotate(-2deg) scale(0.98); opacity: 0.75; }
+        }
+
+        @keyframes networkPulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.3; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo svg {
+            width: 35px;
+            height: 35px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-white);
+        }
+
+        nav {
+            display: flex;
+            gap: 35px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px 35px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--text-white);
+        }
+
+        .cta-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            box-shadow: 0 5px 25px rgba(0, 210, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            padding: 100px 0 80px 0;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+
+        .all-in-one {
+            margin: 80px 0;
+            padding: 60px 50px;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            backdrop-filter: blur(20px);
+        }
+
+        .all-in-one h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .all-in-one .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 60px;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .step-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .step-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            background: rgba(0, 210, 255, 0.05);
+        }
+
+        .step-label {
+            font-size: 11px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .step-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .step-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .arrow {
+            font-size: 28px;
+            color: #5d6d8a;
+        }
+
+        .contact-section {
+            margin: 80px 0;
+            padding: 70px 60px;
+            background: linear-gradient(135deg, rgba(0, 210, 255, 0.05) 0%, rgba(0, 114, 255, 0.02) 100%);
+            border: 1px solid rgba(0, 210, 255, 0.15);
+            border-radius: 30px;
+            backdrop-filter: blur(20px);
+        }
+
+        .contact-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-section .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px;
+            border-radius: 12px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: rgba(0, 210, 255, 0.05);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%);
+            color: white;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.4);
+        }
+
+        .contact-bar {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-item a {
+            color: var(--text-white);
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-color);
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 210, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #5d6d8a;
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-switcher a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0 8px;
+            transition: 0.3s;
+        }
+
+        .lang-switcher a:hover,
+        .lang-switcher a.active {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 968px) {
+            nav { display: none; }
+            .hero {
+                max-width: 100%;
+                padding: 60px 0;
+            }
+            .hero h1 {
+                font-size: 42px;
+            }
+            .bg-3d {
+                width: 100%;
+                opacity: 0.3;
+            }
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+            .arrow {
+                transform: rotate(90deg);
+            }
+            .contact-section,
+            .all-in-one {
+                padding: 40px 25px;
+            }
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-switcher">
+        <a href="/">PL</a> | <a href="/en" class="active">EN</a>
+    </div>
+
+    <div class="bg-3d"></div>
+
+    <div class="container">
+        
+        <header>
+            <div class="logo">
+                <svg viewBox="0 0 100 100" fill="none">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#2E86FB"/>
+                            <stop offset="100%" stop-color="#00D2FF"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 20 L50 80 L70 80 L40 20 Z" fill="url(#logoGrad)"/>
+                    <path d="M80 20 L50 80 L35 50 L65 20 Z" fill="white" opacity="0.9"/>
+                </svg>
+                <span class="logo-text">Visuals</span>
+            </div>
+
+            <nav>
+                <a href="#" class="active">Home</a>
+                <a href="#solutions">Solutions</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="#contact" class="cta-btn">Free Consultation</a>
+        </header>
+
+        <section class="hero">
+            <h1>You see how AI is changing the market. Don't want to fall behind.</h1>
+            <p>Your competition is already automating, optimizing, scaling. You know you need to act, but don't know where to start. I'll help you implement technology that gives you an edge - without risk and chaos.</p>
+            
+            <div class="hero-cta">
+                <a href="#contact" class="cta-btn">Book Strategic Consultation</a>
+                <div class="trust-badge">
+                    <div class="pulse-dot"></div>
+                    <span>First call is free</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-in-one" id="solutions">
+            <h2>What Problems Do I Solve?</h2>
+            <p class="subtitle">Straight talk. No tech jargon. Just results you can measure in $$.</p>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <span class="step-label">Problem</span>
+                    <h3>You're losing customers because you're too slow</h3>
+                    <p>Competition responds in a minute, you in 2 days. They have chatbots, you have Excel. I automate customer service - you respond 24/7, even at night.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step-card">
+                    <span class="step-label">Problem</span>
+                    <h3>5 systems, zero data</h3>
+                    <p>Accounting in one, customers in another, inventory in a third. You don't know what's happening. I connect everything - one dashboard, all numbers live.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step-card">
+                    <span class="step-label">Problem</span>
+                    <h3>People doing manual work</h3>
+                    <p>Copying invoices, creating reports manually, checking order statuses. You're paying for time that could be automated. I save 40% on labor costs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-in-one" style="margin-top: 100px;">
+            <h2>How Does It Work in Practice?</h2>
+            <p class="subtitle">Simple. We meet, talk about your business, I show you where you're losing money. Then I fix it.</p>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <span class="step-label">Step 1</span>
+                    <h3>Conversation</h3>
+                    <p>60 minutes. You talk about your company. I ask about numbers, processes, people. I find where you're wasting time and money. It's free.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step-card">
+                    <span class="step-label">Step 2</span>
+                    <h3>Proposal</h3>
+                    <p>You get a concrete plan: what I'll do, how much it costs, what the outcome will be. You know exactly what you're getting into. No surprises.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step-card">
+                    <span class="step-label">Step 3</span>
+                    <h3>Results</h3>
+                    <p>I implement. You watch the numbers: costs drop, revenue grows, people have time for important things. Measurable. In dollars.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2>First call is a free audit</h2>
+            <p class="subtitle">60 minutes where you'll learn exactly where you're losing money and how to change it</p>
+
+            <div class="form-wrapper">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@company.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 123 456 789">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Your Company Inc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="revenue">Company Size (optional)</label>
+                        <select id="revenue" name="revenue">
+                            <option value="">-- Prefer not to say --</option>
+                            <option value="startup">Startup / Small business (under $2M)</option>
+                            <option value="sme">Medium business ($2M-$10M)</option>
+                            <option value="mid">Established company ($10M-$25M)</option>
+                            <option value="enterprise">Large company ($25M+)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">What's Your Biggest Pain Point? *</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Select situation --</option>
+                            <option value="competition">Competition is beating me technologically</option>
+                            <option value="ai-revolution">I see the AI revolution but don't know how to implement it</option>
+                            <option value="costs">I'm losing too much money on operations</option>
+                            <option value="chaos">My systems are a mess - everything is disconnected</option>
+                            <option value="scaling">I can't scale - processes are breaking</option>
+                            <option value="data">I'm making decisions without data</option>
+                            <option value="manual">People waste time on manual work</option>
+                            <option value="strategy">I need a complete technology strategy</option>
+                            <option value="security">I'm worried about security and compliance</option>
+                            <option value="other">Other situation / want to talk</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Information (optional)</label>
+                        <textarea id="message" name="message" placeholder="Describe your situation - the more I know, the better I can prepare for our call..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Book Free Audit</button>
+                    
+                    <p style="font-size: 12px; color: #718096; margin-top: 15px; text-align: center;">
+                        First call costs you nothing. I'll respond within 24 hours.
+                    </p>
+                </form>
+
+                <div class="contact-bar">
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <a href="tel:+48609112480">+48 609 112 480</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📧</div>
+                        <a href="mailto:rberecki@gmail.com">rberecki@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <span>Lublin, Poland / Remote worldwide</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Visuals | Rafał Berecki</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                revenue: document.getElementById('revenue').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+
+            const subject = encodeURIComponent(`New inquiry: ${formData.service}`);
+            const body = encodeURIComponent(
+                `Name: ${formData.name}\n` +
+                `Email: ${formData.email}\n` +
+                `Phone: ${formData.phone}\n` +
+                `Company: ${formData.company}\n` +
+                `Company Size: ${formData.revenue}\n` +
+                `Service: ${formData.service}\n` +
+                `Message: ${formData.message}`
+            );
+            
+            window.location.href = `mailto:rberecki@gmail.com?subject=${subject}&body=${body}`;
+            
+            alert('Thank you! The form will open your email client.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

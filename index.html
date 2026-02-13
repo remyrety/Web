@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Visuals | Rafał Berecki - Wdrożenia AI i Automatyzacja dla Właścicieli Firm</title>
+    <meta name="description" content="Widzisz, jak AI zmienia rynek, ale nie wiesz od czego zacząć? Pomogę Ci wdrożyć technologię, która da przewagę - bez ryzyka i chaosu.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary-color: #00D2FF;
+            --bg-dark: #0a1628;
+            --card-bg: rgba(15, 30, 50, 0.6);
+            --text-white: #ffffff;
+            --text-muted: #8b9bb4;
+        }
+
+        body {
+            background-color: #050A14;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(0, 114, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 210, 255, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(18, 28, 54, 0.4) 0%, #050A14 70%);
+            color: var(--text-white);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* FRACTAL SACRED GEOMETRY BACKGROUND */
+        .bg-3d {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 70%;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.7;
+        }
+
+        /* Main fractal container */
+        .bg-3d::before {
+            content: '';
+            position: absolute;
+            top: 15%;
+            right: 5%;
+            width: 700px;
+            height: 700px;
+            background: url('data:image/svg+xml,<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="starGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%2300D2FF" stop-opacity="0.9"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0.6"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><radialGradient id="starCore"><stop offset="0%" stop-color="%23ffffff" stop-opacity="1"/><stop offset="50%" stop-color="%2300D2FF" stop-opacity="0.8"/><stop offset="100%" stop-color="%230072FF" stop-opacity="0"/></radialGradient></defs><g opacity="0.3"><circle cx="120" cy="80" r="1" fill="%23ffffff" opacity="0.4"/><circle cx="580" cy="120" r="1" fill="%23ffffff" opacity="0.5"/><circle cx="200" cy="180" r="0.8" fill="%2300D2FF" opacity="0.3"/><circle cx="450" cy="90" r="1" fill="%23ffffff" opacity="0.4"/><circle cx="320" cy="150" r="0.8" fill="%2300D2FF" opacity="0.4"/><circle cx="150" cy="250" r="1" fill="%23ffffff" opacity="0.3"/><circle cx="520" cy="200" r="0.8" fill="%2300D2FF" opacity="0.5"/><circle cx="280" cy="300" r="1" fill="%23ffffff" opacity="0.4"/><circle cx="600" cy="280" r="1" fill="%23ffffff" opacity="0.3"/><circle cx="180" cy="420" r="0.8" fill="%2300D2FF" opacity="0.4"/><circle cx="480" cy="380" r="1" fill="%23ffffff" opacity="0.5"/><circle cx="350" cy="480" r="1" fill="%23ffffff" opacity="0.3"/><circle cx="220" cy="550" r="0.8" fill="%2300D2FF" opacity="0.4"/><circle cx="540" cy="520" r="1" fill="%23ffffff" opacity="0.4"/></g><g filter="url(%23glow)"><circle cx="200" cy="120" r="5" fill="url(%23starCore)"/><circle cx="200" cy="120" r="3" fill="%23ffffff"/><circle cx="260" cy="140" r="4" fill="url(%23starCore)"/><circle cx="260" cy="140" r="2.5" fill="%23ffffff"/><circle cx="280" cy="200" r="4" fill="url(%23starCore)"/><circle cx="280" cy="200" r="2.5" fill="%23ffffff"/><circle cx="240" cy="220" r="3.5" fill="url(%23starCore)"/><circle cx="240" cy="220" r="2" fill="%2300D2FF"/><circle cx="180" cy="240" r="4.5" fill="url(%23starCore)"/><circle cx="180" cy="240" r="2.8" fill="%23ffffff"/><circle cx="140" cy="260" r="4" fill="url(%23starCore)"/><circle cx="140" cy="260" r="2.5" fill="%23ffffff"/><circle cx="100" cy="290" r="4.5" fill="url(%23starCore)"/><circle cx="100" cy="290" r="2.8" fill="%23ffffff"/><path d="M200,120 L260,140 L280,200 L240,220 M240,220 L180,240 L140,260 L100,290" stroke="%2300D2FF" stroke-width="1.5" opacity="0.4" fill="none"/></g><g filter="url(%23glow)"><circle cx="450" cy="280" r="6" fill="url(%23starCore)"/><circle cx="450" cy="280" r="4" fill="%23ffffff"/><circle cx="320" cy="240" r="5" fill="url(%23starCore)"/><circle cx="320" cy="240" r="3" fill="%2300D2FF"/><circle cx="480" cy="250" r="4" fill="url(%23starCore)"/><circle cx="480" cy="250" r="2.5" fill="%23ffffff"/><circle cx="380" cy="260" r="4" fill="url(%23starCore)"/><circle cx="380" cy="260" r="2.5" fill="%2300D2FF"/><path d="M450,280 L480,250 M450,280 L420,300 L380,280 M380,260 L320,240" stroke="%2300D2FF" stroke-width="1.5" opacity="0.5" fill="none"/></g><g filter="url(%23glow)"><circle cx="520" cy="400" r="8" fill="url(%23starCore)"/><circle cx="520" cy="400" r="5" fill="%23ffaa00"/><circle cx="520" cy="400" r="15" fill="%23ffaa00" opacity="0.1"/></g><g filter="url(%23glow)"><circle cx="420" cy="480" r="6" fill="url(%23starCore)"/><circle cx="420" cy="480" r="4" fill="%2300D2FF"/></g><g filter="url(%23glow)" opacity="0.6"><circle cx="580" cy="180" r="5" fill="url(%23starCore)"/><circle cx="580" cy="180" r="3" fill="%23ffcc00"/><circle cx="600" cy="160" r="4.5" fill="url(%23starCore)"/><circle cx="600" cy="160" r="2.8" fill="%23ffffff"/><line x1="580" y1="180" x2="600" y2="160" stroke="%2300D2FF" stroke-width="1" opacity="0.4"/></g><path d="M520,400 L420,480 L320,240 Z" stroke="%2300D2FF" stroke-width="0.8" opacity="0.15" fill="none" stroke-dasharray="4,4"/><text x="20" y="680" font-family="Poppins" font-size="11" fill="%2300D2FF" opacity="0.4">27.04.1990 • 23:00 • Lublin</text><text x="150" y="200" font-family="Poppins" font-size="9" fill="%2300D2FF" opacity="0.3">URSA MAJOR</text><text x="420" y="320" font-family="Poppins" font-size="9" fill="%2300D2FF" opacity="0.3">LEO</text><text x="530" y="430" font-family="Poppins" font-size="9" fill="%23ffaa00" opacity="0.4">Arcturus</text></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: rotateFloat 30s ease-in-out infinite;
+            mix-blend-mode: screen;
+            mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+            -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+        }
+
+        /* Secondary layer - network connections */
+        .bg-3d::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="networkGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%2300D2FF" stop-opacity="0.15"/><stop offset="100%" stop-color="%230072FF" stop-opacity="0.05"/></linearGradient></defs><!-- Network mesh --><line x1="100" y1="150" x2="300" y2="250" stroke="%2300D2FF" stroke-width="0.5" opacity="0.2"/><line x1="300" y1="250" x2="500" y2="200" stroke="%2300D2FF" stroke-width="0.5" opacity="0.2"/><line x1="500" y1="200" x2="700" y2="300" stroke="%2300D2FF" stroke-width="0.5" opacity="0.2"/><line x1="700" y1="300" x2="850" y2="180" stroke="%2300D2FF" stroke-width="0.5" opacity="0.2"/><line x1="200" y1="400" x2="400" y2="450" stroke="%230072FF" stroke-width="0.5" opacity="0.15"/><line x1="400" y1="450" x2="600" y2="420" stroke="%230072FF" stroke-width="0.5" opacity="0.15"/><line x1="600" y1="420" x2="800" y1="500" stroke="%230072FF" stroke-width="0.5" opacity="0.15"/><!-- Data nodes --><circle cx="100" cy="150" r="3" fill="%2300D2FF" opacity="0.4"/><circle cx="300" cy="250" r="3" fill="%2300D2FF" opacity="0.4"/><circle cx="500" cy="200" r="3" fill="%2300D2FF" opacity="0.5"/><circle cx="700" cy="300" r="3" fill="%2300D2FF" opacity="0.4"/><circle cx="850" cy="180" r="3" fill="%2300D2FF" opacity="0.4"/><circle cx="200" cy="400" r="3" fill="%230072FF" opacity="0.3"/><circle cx="400" cy="450" r="3" fill="%230072FF" opacity="0.3"/><circle cx="600" cy="420" r="3" fill="%230072FF" opacity="0.4"/><circle cx="800" cy="500" r="3" fill="%230072FF" opacity="0.3"/><!-- Floating particles --><circle cx="250" cy="150" r="1.5" fill="%2300D2FF" opacity="0.5"/><circle cx="450" cy="280" r="1.5" fill="%2300D2FF" opacity="0.5"/><circle cx="650" cy="380" r="1.5" fill="%230072FF" opacity="0.4"/><circle cx="550" cy="550" r="1.5" fill="%230072FF" opacity="0.4"/><circle cx="350" cy="600" r="1.5" fill="%2300D2FF" opacity="0.5"/></svg>');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            animation: networkPulse 20s ease-in-out infinite;
+        }
+
+        @keyframes rotateFloat {
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg) scale(1); 
+                opacity: 0.7;
+            }
+            33% { 
+                transform: translateY(-30px) rotate(3deg) scale(1.02); 
+                opacity: 0.8;
+            }
+            66% { 
+                transform: translateY(-15px) rotate(-2deg) scale(0.98); 
+                opacity: 0.75;
+            }
+        }
+
+        @keyframes networkPulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.3; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo svg {
+            width: 35px;
+            height: 35px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-white);
+        }
+
+        nav {
+            display: flex;
+            gap: 35px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px 35px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--text-white);
+        }
+
+        .cta-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            box-shadow: 0 5px 25px rgba(0, 210, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 100px 0 80px 0;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+
+        /* ALL-IN-ONE SECTION */
+        .all-in-one {
+            margin: 80px 0;
+            padding: 60px 50px;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            backdrop-filter: blur(20px);
+        }
+
+        .all-in-one h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .all-in-one .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 60px;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .step-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .step-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            background: rgba(0, 210, 255, 0.05);
+        }
+
+        .step-label {
+            font-size: 11px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .step-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .step-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .arrow {
+            font-size: 28px;
+            color: #5d6d8a;
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            margin: 80px 0;
+            padding: 70px 60px;
+            background: linear-gradient(135deg, rgba(0, 210, 255, 0.05) 0%, rgba(0, 114, 255, 0.02) 100%);
+            border: 1px solid rgba(0, 210, 255, 0.15);
+            border-radius: 30px;
+            backdrop-filter: blur(20px);
+        }
+
+        .contact-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-section .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px;
+            border-radius: 12px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: rgba(0, 210, 255, 0.05);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%);
+            color: white;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.4);
+        }
+
+        .contact-bar {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-item a {
+            color: var(--text-white);
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-color);
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 210, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #5d6d8a;
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* MOBILE */
+        @media (max-width: 968px) {
+            nav { display: none; }
+            
+            .hero {
+                max-width: 100%;
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .bg-3d {
+                width: 100%;
+                opacity: 0.3;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
+            }
+
+            .contact-section,
+            .all-in-one {
+                padding: 40px 25px;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-3d"></div>
+
+    <div class="container">
+        
+        <header>
+            <div class="logo">
+                <svg viewBox="0 0 100 100" fill="none">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#2E86FB"/>
+                            <stop offset="100%" stop-color="#00D2FF"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 20 L50 80 L70 80 L40 20 Z" fill="url(#logoGrad)"/>
+                    <path d="M80 20 L50 80 L35 50 L65 20 Z" fill="white" opacity="0.9"/>
+                </svg>
+                <span class="logo-text">Visuals</span>
+            </div>
+
+            <nav>
+                <a href="#" class="active">Start</a>
+                <a href="#kompetencje">Kompetencje</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+
+            <a href="#kontakt" class="cta-btn">Darmowa Konsultacja</a>
+        </header>
+
+        <section class="hero">
+            <h1>Widzisz, jak AI zmienia rynek. Nie chcesz zostać w tyle.</h1>
+            <p>Konkurencja już automatyzuje, optymalizuje, skaluje. Wiesz, że musisz działać, ale nie wiesz od czego zacząć. Pomogę Ci wdrożyć technologię, która da przewagę - bez ryzyka i chaosu.</p>
+            
+            <div class="hero-cta">
+                <a href="#kontakt" class="cta-btn">Umów konsultację strategiczną</a>
+                <div class="trust-badge">
+                    <div class="pulse-dot"></div>
+                    <span>Pierwsza rozmowa nic nie kosztuje</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-in-one" id="kompetencje">
+            <h2>Jakie problemy rozwiązuję?</h2>
+            <p class="subtitle">Konkretnie. Żadnego tech-talk. Tylko efekty, które widzisz w PLN.</p>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <span class="step-label">Problem</span>
+                    <h3>Tracisz klientów, bo jesteś wolniejszy</h3>
+                    <p>Konkurencja odpowiada w minutę, Ty w 2 dni. Oni mają chatboty, Ty Excel. Automatyzuję obsługę klienta - odpowiadasz 24/7, nawet w nocy.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step-card">
+                    <span class="step-label">Problem</span>
+                    <h3>Masz 5 systemów, zero danych</h3>
+                    <p>Księgowość w jednym, klienci w drugim, magazyn w trzecim. Nie wiesz, co się dzieje. Łączę wszystko - jeden dashboard, wszystkie liczby na żywo.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step-card">
+                    <span class="step-label">Problem</span>
+                    <h3>Ludzie robią robotę na piechotę</h3>
+                    <p>Przepisują faktury, tworzą raporty ręcznie, sprawdzają statusy zamówień. Płacisz za czas, który można zautomatyzować. Oszczędzam 40% kosztów pracy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-in-one" style="margin-top: 100px;">
+            <h2>Jak to wygląda w praktyce?</h2>
+            <p class="subtitle">Prosto. Spotykamy się, gadam o Twoim biznesie, pokazuję gdzie tracisz kasę. Potem to naprawiam.</p>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <span class="step-label">Krok 1</span>
+                    <h3>Rozmowa</h3>
+                    <p>60 minut. Opowiadasz o firmie. Ja pytam o liczby, procesy, ludzi. Znajduję gdzie tracisz czas i kasę. To za darmo.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step-card">
+                    <span class="step-label">Krok 2</span>
+                    <h3>Propozycja</h3>
+                    <p>Dostajesz konkretny plan: co zrobię, ile to kosztuje, jaki będzie efekt. Wiesz dokładnie, w co wchodzisz. Żadnych niespodzianek.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step-card">
+                    <span class="step-label">Krok 3</span>
+                    <h3>Efekty</h3>
+                    <p>Wdrażam. Patrzysz na liczby: spadają koszty, rosną przychody, ludzie mają czas na ważne rzeczy. Mierzalne. W PLN.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="kontakt">
+            <h2>Pierwsza rozmowa to audyt - za darmo</h2>
+            <p class="subtitle">60 minut, w którym dowiesz się dokładnie, gdzie tracisz pieniądze i jak to zmienić</p>
+
+            <div class="form-wrapper">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Imię i Nazwisko *</label>
+                        <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="jan@firma.pl">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Nazwa firmy</label>
+                        <input type="text" id="company" name="company" placeholder="Twoja Firma Sp. z o.o.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="revenue">Wielkość firmy (opcjonalnie)</label>
+                        <select id="revenue" name="revenue">
+                            <option value="">-- Wolę nie podawać --</option>
+                            <option value="startup">Startup / Mała firma (do 5 mln PLN)</option>
+                            <option value="sme">Średnia firma (5-20 mln PLN)</option>
+                            <option value="mid">Rozwinięta firma (20-50 mln PLN)</option>
+                            <option value="enterprise">Duża firma (50+ mln PLN)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Co Cię najbardziej boli? *</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Wybierz sytuację --</option>
+                            <option value="konkurencja">Konkurencja wyprzedza mnie technologicznie</option>
+                            <option value="ai-revolution">Widzę rewolucję AI, ale nie wiem jak to wdrożyć</option>
+                            <option value="koszty">Tracę zbyt dużo pieniędzy na operacje</option>
+                            <option value="chaos">Mam chaos w systemach - wszystko rozłączone</option>
+                            <option value="skalowanie">Nie mogę skalować - procesy się sypią</option>
+                            <option value="dane">Podejmuję decyzje bez danych</option>
+                            <option value="manual">Ludzie tracą czas na manualną robotę</option>
+                            <option value="strategia">Potrzebuję całościowej strategii technologicznej</option>
+                            <option value="security">Boję się o bezpieczeństwo i RODO</option>
+                            <option value="inne">Inna sytuacja / chcę porozmawiać</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Dodatkowe informacje (opcjonalnie)</label>
+                        <textarea id="message" name="message" placeholder="Opisz swoją sytuację - im więcej wiem, tym lepiej przygotuję się do rozmowy..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Umów bezpłatny audyt</button>
+                    
+                    <p style="font-size: 12px; color: #718096; margin-top: 15px; text-align: center;">
+                        Pierwsza rozmowa nic Cię nie kosztuje. Odezwę się w ciągu 24h.
+                    </p>
+                </form>
+
+                <div class="contact-bar">
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <a href="tel:+48609112480">+48 609 112 480</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📧</div>
+                        <a href="/cdn-cgi/l/email-protection#92e0f0f7e0f7f1f9fbd2f5fff3fbfebcf1fdff"><span class="__cf_email__" data-cfemail="750717100710161e1c351218141c195b161a18">[email&#160;protected]</span></a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <span>Lublin / Cała Polska zdalnie</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Visuals | Rafał Berecki</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+
+            const subject = encodeURIComponent(`Nowe zgłoszenie: ${formData.service}`);
+            const body = encodeURIComponent(
+                `Imię i nazwisko: ${formData.name}\n
