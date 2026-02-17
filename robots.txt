@@ -1,4 +1,30 @@
+# robots.txt for berecki.com
+# Allows all search engine crawlers to index the site
+
 User-agent: *
 Allow: /
+Allow: /index.html
+Allow: /index-en.html
+Disallow: /api/
+Disallow: /_next/
+Disallow: /.git/
+Disallow: /node_modules/
 
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Crawl-delay for other bots (seconds between requests)
+Crawl-delay: 2
+
+# Sitemaps
 Sitemap: https://berecki.com/sitemap.xml
+
+# Prefer HTTPS
+Prefer: https://berecki.com

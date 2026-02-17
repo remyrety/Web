@@ -1,20 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Polish Home Page -->
   <url>
     <loc>https://berecki.com/</loc>
-    <lastmod>2024-02-13</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="en" href="https://berecki.com/en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://berecki.com/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://berecki.com/"/>
   </url>
+  
+  <!-- Polish Sections -->
   <url>
-    <loc>https://berecki.com/en</loc>
-    <lastmod>2024-02-13</lastmod>
+    <loc>https://berecki.com/#omnie</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://berecki.com/#omnie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://berecki.com/en/index.html#about"/>
+  </url>
+  
+  <url>
+    <loc>https://berecki.com/#kompetencje</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://berecki.com/#kompetencje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://berecki.com/en/index.html#solutions"/>
+  </url>
+  
+  <url>
+    <loc>https://berecki.com/#kontakt</loc>
+    <lastmod>2025-01-15</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="en" href="https://berecki.com/en"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://berecki.com/#kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://berecki.com/en/index.html#contact"/>
+  </url>
+  
+  <!-- English Home Page -->
+  <url>
+    <loc>https://berecki.com/en/index.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://berecki.com/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://berecki.com/"/>
+  </url>
+  
+  <!-- English Sections -->
+  <url>
+    <loc>https://berecki.com/en/index.html#about</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://berecki.com/en/index.html#about"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://berecki.com/#omnie"/>
+  </url>
+  
+  <url>
+    <loc>https://berecki.com/en/index.html#solutions</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://berecki.com/en/index.html#solutions"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://berecki.com/#kompetencje"/>
+  </url>
+  
+  <url>
+    <loc>https://berecki.com/en/index.html#contact</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://berecki.com/en/index.html#contact"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://berecki.com/#kontakt"/>
   </url>
 </urlset>
