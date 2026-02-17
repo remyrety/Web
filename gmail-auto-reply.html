@@ -1,0 +1,96 @@
+<!-- 
+INSTRUKCJA: USTAWIENIE AUTO-REPLY W POLSKIM GMAIL
+
+Skopiuj CAŁY KOD PONIŻEJ (od <html> do ostatniego </html>)
+i wklej go w Gmailu w sekcji Odpowiedź automatyczna (Vacation Responder)
+
+WAŻNE: Skopiuj cały kod razem z tagami HTML!
+-->
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background: #f5f5f5; }
+        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        .header { background: linear-gradient(135deg, #0a1628 0%, #0f1e32 50%, #051014 100%); padding: 30px; text-align: center; border-left: 4px solid #00D2FF; }
+        .logo-section { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 15px; }
+        .logo { width: 40px; height: 40px; }
+        .brand-name { margin: 0; font-size: 24px; color: white; letter-spacing: 1px; font-weight: bold; }
+        .subtitle { margin: 0; color: #00D2FF; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+        .content { padding: 30px; color: #333; }
+        .greeting { margin: 0 0 20px 0; font-size: 22px; color: #0a1628; font-weight: bold; }
+        .text { margin: 0 0 16px 0; line-height: 1.6; font-size: 15px; color: #555; }
+        .action-box { background: #f9f9f9; border-left: 3px solid #00D2FF; padding: 16px; margin: 0 0 24px 0; border-radius: 4px; }
+        .action-item { margin: 8px 0; font-size: 14px; color: #333; }
+        .action-link { color: #00D2FF; text-decoration: none; font-weight: 600; }
+        .what-next { margin: 0 0 8px 0; font-size: 14px; color: #0a1628; font-weight: bold; }
+        .next-list { margin: 8px 0 24px 20px; padding: 0; font-size: 14px; color: #555; line-height: 1.8; }
+        .next-list li { margin: 6px 0; }
+        .cta-section { background: linear-gradient(135deg, #00D2FF 0%, #0072FF 100%); padding: 25px; text-align: center; color: white; }
+        .cta-text { margin: 0 0 16px 0; font-size: 14px; line-height: 1.6; }
+        .cta-button { display: inline-block; background: white; color: #00D2FF; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 14px; }
+        .footer { background: #0a1628; color: #8b9bb4; padding: 20px; font-size: 12px; line-height: 1.6; border-top: 1px solid #00D2FF; }
+        .footer-name { color: #00D2FF; font-weight: bold; margin: 0 0 8px 0; }
+        .footer-contact a { color: #00D2FF; text-decoration: none; }
+        .footer-bottom { margin: 12px 0 0 0; color: #5d6d8a; font-size: 11px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-section">
+                <svg class="logo" viewBox="0 0 100 100" fill="none">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#2E86FB"/>
+                            <stop offset="100%" stop-color="#00D2FF"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 20 L50 80 L70 80 L40 20 Z" fill="url(#logoGrad)"/>
+                    <path d="M80 20 L50 80 L35 50 L65 20 Z" fill="white" opacity="0.9"/>
+                </svg>
+                <h1 class="brand-name">VISUALS</h1>
+            </div>
+            <p class="subtitle">Transformacja Cyfrowa</p>
+        </div>
+
+        <div class="content">
+            <h2 class="greeting">Dziękuję za wiadomość!</h2>
+            
+            <p class="text">Cześć!</p>
+
+            <p class="text">Otrzymaliśmy Twoją wiadomość i jesteśmy wdzięczni, że się z nami skontaktowałeś. Przeczytam Twoje pytanie uważnie i odezwę się do Ciebie <strong style="color: #00D2FF;">tak szybko, jak to możliwe</strong> — zazwyczaj w ciągu <strong>24 godzin</strong>.</p>
+
+            <p class="text">W tym czasie możesz:</p>
+
+            <div class="action-box">
+                <div class="action-item"><strong>📖 Zapoznaj się z moją ofertą:</strong><br><a href="https://berecki.com" class="action-link">berecki.com</a></div>
+                <div class="action-item"><strong>💼 Sprawdź mój profil:</strong><br><a href="https://www.linkedin.com/in/rberecki" class="action-link">LinkedIn - Rafał Berecki</a></div>
+                <div class="action-item"><strong>🤝 Inne pytania?</strong><br><a href="mailto:rberecki@gmail.com" class="action-link">Napisz do mnie</a></div>
+            </div>
+
+            <p class="what-next">Co się dzieje dalej?</p>
+            <ol class="next-list">
+                <li>✉️ Przeczytam Twoją wiadomość uważnie</li>
+                <li>🔍 Przeanalizuję Twoją sytuację i wyzwania</li>
+                <li>💬 Odezwę się z konkretnymi rozwiązaniami</li>
+                <li>🎯 Uzgodnimy kolejne kroki</li>
+            </ol>
+        </div>
+
+        <div class="cta-section">
+            <p class="cta-text">W razie pilnych kwestii:</p>
+            <a href="tel:+48609112480" class="cta-button">📞 Zadzwoń: +48 609 112 480</a>
+        </div>
+
+        <div class="footer">
+            <p class="footer-name">Rafał Berecki</p>
+            <p style="margin: 0 0 8px 0;">Transformacja Cyfrowa & AI Implementation<br>
+            <a href="https://berecki.com" class="footer-contact">berecki.com</a> | <a href="mailto:rberecki@gmail.com" class="footer-contact">rberecki@gmail.com</a></p>
+            <p class="footer-bottom">🌍 Lublin, Poland | Worldwide (Remote) | +48 609 112 480</p>
+        </div>
+    </div>
+</body>
+</html>

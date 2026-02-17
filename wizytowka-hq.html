@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizytówka Rafał Berecki - Wysokiej Jakości</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            page-break-after: always;
+        }
+
+        /* Wizytówka frontowa - centered na A4 */
+        .card-front {
+            width: 90mm;
+            height: 50mm;
+            background: linear-gradient(135deg, #0a1628 0%, #0f1e32 50%, #051014 100%);
+            border: 2px solid #00D2FF;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        /* Gradient accent bar left */
+        .card-front::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #00D2FF 0%, #0072FF 100%);
+            z-index: 1;
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            gap: 7mm;
+            padding: 4mm 5mm;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1mm;
+            flex-shrink: 0;
+        }
+
+        .card-logo {
+            width: 20mm;
+            height: 20mm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-logo svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 2px 4px rgba(0, 210, 255, 0.3));
+        }
+
+        .brand-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 12pt;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1.2px;
+            white-space: nowrap;
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            gap: 1mm;
+        }
+
+        .card-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 16pt;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1;
+            letter-spacing: -0.3px;
+        }
+
+        .card-title {
+            font-size: 7.5pt;
+            color: #00D2FF;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.9px;
+            line-height: 1.1;
+        }
+
+        .card-contacts {
+            font-size: 6.5pt;
+            color: #b0bcc9;
+            line-height: 1.6;
+        }
+
+        .card-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5mm;
+        }
+
+        .contact-icon {
+            font-size: 4pt;
+            letter-spacing: 0;
+        }
+
+        .card-website {
+            font-size: 7pt;
+            color: #00D2FF;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* Wizytówka z tyłu - QR */
+        .card-back {
+            width: 90mm;
+            height: 50mm;
+            background: linear-gradient(135deg, #0a1628 0%, #0f1e32 50%, #051014 100%);
+            border: 2px solid #00D2FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .card-back::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #00D2FF 0%, #0072FF 100%);
+            z-index: 1;
+        }
+
+        .qr-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3mm;
+        }
+
+        .qr-code-box {
+            width: 35mm;
+            height: 35mm;
+            background: white;
+            padding: 1mm;
+            border-radius: 2mm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 210, 255, 0.2);
+        }
+
+        .qr-code-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            image-rendering: crisp-edges;
+        }
+
+        .qr-label {
+            font-size: 6pt;
+            color: #00D2FF;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            white-space: nowrap;
+        }
+
+        /* Print settings */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+
+            .a4-page {
+                page-break-after: always;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            .card-front,
+            .card-back {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+
+        @media screen {
+            .a4-page {
+                border: 1px dashed #ccc;
+                margin: 20px auto;
+            }
+
+            .print-info {
+                text-align: center;
+                padding: 20px;
+                color: #666;
+                font-size: 12px;
+                background: #f5f5f5;
+                margin: 20px;
+                border-radius: 8px;
+            }
+
+            .print-button {
+                display: block;
+                margin: 20px auto;
+                padding: 12px 40px;
+                background: #00D2FF;
+                color: white;
+                border: none;
+                border-radius: 25px;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .print-button:hover {
+                box-shadow: 0 5px 20px rgba(0, 210, 255, 0.4);
+                transform: translateY(-2px);
+            }
+        }
+
+        @media print {
+            .print-info,
+            .print-button {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">🖨️ Drukuj Wizytówkę (tusz na obydwu stronach A4)</button>
+
+    <div class="print-info">
+        <strong>Instrukcja druku:</strong><br>
+        1. Drukuj Stronę 1 (Front) w High Quality | 2. Obróć papier | 3. Drukuj Stronę 2 (Back QR)<br>
+        <strong>Ustawienia:</strong> A4 | Landscape | 300 DPI | Bez marginów | Dokładne kolory
+    </div>
+
+    <!-- STRONA 1: WIZYTÓWKA FRONT -->
+    <div class="a4-page">
+        <div class="card-front">
+            <div class="card-content">
+                <!-- Logo + VISUALS słupek -->
+                <div class="card-logo-section">
+                    <div class="card-logo">
+                        <svg viewBox="0 0 100 100" fill="none">
+                            <defs>
+                                <linearGradient id="logoGradFront" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#2E86FB"/>
+                                    <stop offset="100%" stop-color="#00D2FF"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M20 20 L50 80 L70 80 L40 20 Z" fill="url(#logoGradFront)"/>
+                            <path d="M80 20 L50 80 L35 50 L65 20 Z" fill="white" opacity="0.95"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">VISUALS</div>
+                </div>
+
+                <!-- Główne informacje -->
+                <div class="card-info">
+                    <div class="card-name">Rafał Berecki</div>
+                    <div class="card-title">Transformacja Cyfrowa & AI</div>
+                    <div class="card-contacts">
+                        <div class="card-contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>rberecki@gmail.com</span>
+                        </div>
+                        <div class="card-contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>+48 609 112 480</span>
+                        </div>
+                        <div class="card-contact-item">
+                            <span class="contact-icon">🌐</span>
+                            <span class="card-website">berecki.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STRONA 2: QR CODE BACK -->
+    <div class="a4-page">
+        <div class="card-back">
+            <div class="qr-container">
+                <div class="qr-code-box">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=800x800&data=https://berecki.com&ecc=H&color=000000&bgcolor=FFFFFF" alt="QR Code berecki.com"/>
+                </div>
+                <div class="qr-label">www.berecki.com</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

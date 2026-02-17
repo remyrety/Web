@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Gmail Auto-Reply tylko Netlify</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; }
+        .step { background: #f9f9f9; padding: 20px; margin: 20px 0; border-left: 4px solid #00D2FF; border-radius: 8px; }
+        .step h3 { margin-top: 0; color: #0a1628; }
+        .code { background: #000; color: #0f0; padding: 15px; border-radius: 4px; font-family: monospace; overflow-x: auto; margin: 10px 0; }
+        .warning { background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; border-radius: 4px; margin: 15px 0; }
+        .success { background: #d4edda; padding: 15px; border-left: 4px solid #28a745; border-radius: 4px; margin: 15px 0; }
+        h2 { color: #0a1628; border-bottom: 2px solid #00D2FF; padding-bottom: 10px; }
+        strong { color: #00D2FF; }
+    </style>
+</head>
+<body>
+
+<h1>⚡ Auto-Reply TYLKO z Netlify w Gmailu</h1>
+
+<p>Będziemy ustawiać auto-reply tak, aby wysyłał się <strong>TYLKO</strong> na powiadomienia z Netlify về deploymencie, build statusie itp.</p>
+
+---
+
+## 📋 **OPCJA 1: Filtr Gmail + Canned Response (Zaawansowane, Ręczne)**
+
+<div class="step">
+    <h3>KROK 1: Utwórz Filtr w Gmailu</h3>
+    <ol>
+        <li>Otwórz Gmail → ⚙️ <strong>Ustawienia</strong></li>
+        <li>Karta: <strong>"Filtry i zablokowane adresy"</strong></li>
+        <li>Na dole: kliknij <strong>"Utwórz nowy filtr"</strong></li>
+    </ol>
+</div>
+
+<div class="step">
+    <h3>KROK 2: Ustaw Warunek na Netlify</h3>
+    <p>W polu <strong>"Od:"</strong> wpisz:</p>
+    <div class="code">notifications@netlify.com</div>
+    <p><strong>LUB jeśli chcesz aby łapało wszystkie maile zawierające "Netlify":</strong></p>
+    <div class="code">Netlify</div>
+    <p>Kliknij <strong>"Utwórz filtr"</strong></p>
+</div>
+
+<div class="step">
+    <h3>KROK 3: Wybierz Akcje dla Maili z Netlify</h3>
+    <p>Zaznacz wszystkie opcje, które chcesz:</p>
+    <ul>
+        <li>✅ <strong>"Otaguj wiadomość"</strong> → escolha nową etykietę "Netlify Alerts" (tworzysz nową)</li>
+        <li>✅ <strong>"Nigdy nie pogrław wiadomości do spamu"</strong></li>
+        <li>✅ <strong>"Zaznacz gwiazdką"</strong> (opcjonalnie - aby zawsze na górze)</li>
+    </ul>
+    <p>Kliknij <strong>"Utwórz filtr"</strong></p>
+</div>
+
+<div class="success">
+    <strong>✅ Od teraz wszystkie maile z Netlify będą otagowane "Netlify Alerts"</strong>
+</div>
+
+<div class="step">
+    <h3>KROK 4 (Opcjonalnie): Utwórz Szablon Odpowiedzi</h3>
+    <ol>
+        <li>Napisz nową wiadomość (Compose)</li>
+        <li>Skopiuj poniższy HTML/tekst (odpowiedź dla Netlify)</li>
+        <li>Po wpisaniu tekstu: kliknij <strong>⋮ (trzy kreski)</strong> → <strong>"Szablony"</strong> → <strong>"Zachowaj wersję roboczą jako szablon"</strong></li>
+        <li>Nazwij: <strong>"Netlify Alert Response"</strong></li>
+    </ol>
+</div>
+
+---
+
+## 🤖 **OPCJA 2: Google Apps Script (AUTOMATYCZNE - PRO)**
+
+<p><strong>Ta opcja będzie automatycznie wysyłać odpowiedź na każdy mail z Netlify - bez Twojej interwencji!</strong></p>
+
+<div class="step">
+    <h3>KROK 1: Otwórz Google Apps Script</h3>
+    <ol>
+        <li>Wejdź na: <a href="https://script.google.com" target="_blank">https://script.google.com</a></li>
+        <li>Kliknij <strong>"+ Nowy projekt"</strong></li>
+        <li>Zmień nazwę z "Projekt bez nazwy" na: <strong>"Netlify Auto Reply"</strong></li>
+    </ol>
+</div>
+
+<div class="step">
+    <h3>KROK 2: Wklej Kod</h3>
+    <p>Usuń wszystko w edytorze i wklej:</p>
+        <div class="code">function autoReplyToNetlify() {
+    // Szukaj nowych maili z Netlify, które nie mają etykiety "netlify-replied"
+    var threads = GmailApp.search('from:notifications@netlify.com is:unread -label:netlify-replied');
+
+    var replySubject = "Dziękuję — potwierdzenie otrzymania wiadomości";
+    var replyBody = 'Dziękuję za kontakt — otrzymałem Twoją wiadomość. Odpowiem maksymalnie w ciągu 48 godzin.\n\nW sprawach pilnych: +48 609 112 480\n\nPozdrawiam,\nRafał Berecki\nhttps://berecki.com';
+    var replyHtml = '<div style="font-family:Arial, sans-serif; color:#0a1628; line-height:1.5;">'
+                  + '<h2 style="margin:0 0 8px 0; color:#00D2FF;">Dziękuję za kontakt</h2>'
+                  + '<p>Cześć <strong>[Imię]</strong>,</p>'
+                  + '<p>Dziękuję — otrzymałem Twoją wiadomość i odpowiem maksymalnie w ciągu <strong>48 godzin</strong>.</p>'
+                  + '<p>W sprawach pilnych proszę dzwonić: <strong>+48 609 112 480</strong></p>'
+                  + '<p>Pozdrawiam,<br><strong>Rafał Berecki</strong><br><a href="https://berecki.com">berecki.com</a></p>'
+                  + '</div>';
+
+    var emailRegex = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/ig;
+
+    threads.forEach(function(thread) {
+        var messages = thread.getMessages();
+        var message = messages[messages.length - 1]; // najnowsza wiadomość w wątku
+        var plainBody = '';
+        try { plainBody = message.getPlainBody(); } catch(e) { plainBody = message.getBody(); }
+
+        // Szukaj adresu e-mail w treści (najczęściej pole z formularza)
+        var matches = plainBody.match(emailRegex);
+        var recipient = null;
+        if (matches && matches.length) {
+            // wybierz pierwszy adres różny od Twojego i od Netlify
+            for (var i = 0; i < matches.length; i++) {
+                var m = matches[i].trim();
+                var ml = m.toLowerCase();
+                if (ml !== 'rberecki@gmail.com' && ml !== 'notifications@netlify.com') {
+                    recipient = m;
+                    break;
+                }
+            }
+            if (!recipient) recipient = matches[0];
+        }
+
+        // Jeśli znaleziono adres z formularza - wyślij tam, inaczej odp na nadawcę
+        if (recipient) {
+            GmailApp.sendEmail(recipient, replySubject, replyBody, {htmlBody: replyHtml});
+            Logger.log('Replied (HTML) to form email: ' + recipient);
+        } else {
+            var senderEmail = message.getFrom();
+            GmailApp.sendEmail(senderEmail, replySubject, replyBody, {htmlBody: replyHtml});
+            Logger.log('No form email found, replied (HTML) to sender: ' + senderEmail);
+        }
+
+        // Otaguj etykietą "netlify-replied" aby nie odpowiadać ponownie
+        var label = GmailApp.getUserLabelByName('netlify-replied');
+        if (!label) { label = GmailApp.createLabel('netlify-replied'); }
+        thread.addLabel(label);
+        thread.markRead();
+    });
+}</div>
+</div>
+
+<div class="step">
+    <h3>KROK 3: Utwórz Trigger (Uruchomianie Automatyczne)</h3>
+    <ol>
+        <li>W menu: kliknij <strong>"Wyzwalacze"</strong> (ikonka zegarnika z lewej)</li>
+        <li>Kliknij <strong>"+ Utwórz wyzwalacz"</strong></li>
+        <li>Ustawienia:
+            <ul>
+                <li><strong>Funkcja:</strong> autoReplyToNetlify</li>
+                <li><strong>Zastosowanie:</strong> Wyzwalacz czasu</li>
+                <li><strong>Typ wyzwalacza czasu:</strong> Minuty</li>
+                <li><strong>Interwał:</strong> Co 5 minut</li>
+            </ul>
+        </li>
+        <li>Kliknij <strong>"Utwórz"</strong></li>
+    </ol>
+</div>
+
+<div class="success">
+    <strong>✅ GOTOWE! Teraz auto-reply będzie wysyłany automatycze na każdy mail z Netlify co 5 minut!</strong>
+</div>
+
+<div class="warning">
+    <strong>⚠️ WAŻNE:</strong> Google Apps Script poprosci o dostęp do Gmaila - <strong>ZATWIERDŹ</strong> aby to działało!
+</div>
+
+---
+
+## 📧 **SZABLON ODPOWIEDZI NA NETLIFY ALERTS**
+
+<p>Użyj tego tekstu (w opcji 1) lub zmodyfikuj w opcji 2:</p>
+
+<div class="code">Temat: Dziękuję — potwierdzenie otrzymania wiadomości
+
+---
+
+Cześć [Imię],
+
+Dziękuję za kontakt — otrzymałem Twoją wiadomość. Odpowiem maksymalnie w ciągu <strong>48 godzin</strong>.
+
+> W sprawach pilnych proszę o telefon: +48 609 112 480
+
+Pozdrawiam,
+Rafał Berecki
+https://berecki.com</div>
+
+<div class="step">
+        <h3>Wersja HTML (do Gmail / Apps Script)</h3>
+        <pre class="code">&lt;div style="font-family:Arial, sans-serif; color:#0a1628; line-height:1.5;"&gt;
+    &lt;h2 style="margin:0 0 8px 0; color:#00D2FF;"&gt;Dziękuję za kontakt&lt;/h2&gt;
+    &lt;p&gt;Cześć &lt;strong&gt;[Imię]&lt;/strong&gt;,&lt;/p&gt;
+    &lt;p&gt;Dziękuję — otrzymałem Twoją wiadomość i odpowiem maksymalnie w ciągu &lt;strong&gt;48 godzin&lt;/strong&gt;.&lt;/p&gt;
+    &lt;p&gt;W sprawach pilnych proszę dzwonić: &lt;strong&gt;+48 609 112 480&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;Pozdrawiam,&lt;br&gt;&lt;strong&gt;Rafał Berecki&lt;/strong&gt;&lt;br&gt;&lt;a href="https://berecki.com"&gt;berecki.com&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</pre>
+</div>
+
+---
+
+## 🎯 **PODSUMOWANIE: Którą Opcję Wybrać?**
+
+<table style="width: 100%; border-collapse: collapse;">
+    <tr style="background: #f0f0f0;">
+        <th style="padding: 10px; border: 1px solid #ddd;"><strong>Opcja</strong></th>
+        <th style="padding: 10px; border: 1px solid #ddd;"><strong>Zaleta</strong></th>
+        <th style="padding: 10px; border: 1px solid #ddd;"><strong>Wada</strong></th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid #ddd;"><strong>Opcja 1: Filtr + Manual</strong></td>
+        <td style="padding: 10px; border: 1px solid #ddd;">✅ Prosty setup, kontrola manualna</td>
+        <td style="padding: 10px; border: 1px solid #ddd;">❌ Musisz ręcznie odpowiadać każdorazowo</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid #ddd;"><strong>Opcja 2: Apps Script</strong></td>
+        <td style="padding: 10px; border: 1px solid #ddd;">✅ PEŁNIE AUTOMATYCZNE, zawsze działa</td>
+        <td style="padding: 10px; border: 1px solid #ddd;">❌ Trochę bardziej zaawansowane</td>
+    </tr>
+</table>
+
+<div class="success">
+    <strong>🎯 REKOMENDACJA: Użyj OPCJI 2 (Apps Script) - ustawisz raz i zapomnisz! ✨</strong>
+</div>
+
+</body>
+</html>
