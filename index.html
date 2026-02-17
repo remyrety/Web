@@ -612,7 +612,19 @@
 
         /* MOBILE */
         @media (max-width: 968px) {
+            header {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
             nav { display: none; }
+
+            header .cta-btn {
+                padding: 10px 20px;
+                font-size: 13px;
+                order: 3;
+                max-width: 150px;
+            }
             
             .hero {
                 max-width: 100%;
