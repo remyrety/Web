@@ -160,6 +160,30 @@
         nav a:hover, nav a.active {
             color: var(--text-white);
         }
+
+        /* LANGUAGE SWITCH */
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+        }
+
+        .lang-switch a {
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            border: 1px solid transparent;
+            transition: all 0.18s;
+        }
+
+        .lang-switch a.active {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-white);
+            border-color: rgba(255, 255, 255, 0.06);
+        }
         .cta-btn {
             background: var(--primary-color);
             color: white;
@@ -630,6 +654,11 @@
                 <a href="#solutions">Solutions</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <div class="lang-switch" aria-label="language switch">
+                <a href="index.html" class="lang-link" data-lang="pl">PL</a>
+                <a href="index-en.html" class="lang-link" data-lang="en">EN</a>
+            </div>
+
             <a href="#contact" class="cta-btn">Free Consultation</a>
         </header>
 
@@ -885,6 +914,16 @@
     </footer>
 
     <script>
+        // Language switch: mark active link based on <html lang>
+        (function(){
+            try {
+                const pageLang = document.documentElement.lang || (location.pathname.includes('index-en') ? 'en' : 'pl');
+                document.querySelectorAll('.lang-link').forEach(a => {
+                    if (a.dataset && a.dataset.lang === pageLang) a.classList.add('active');
+                });
+            } catch (e) { /* noop */ }
+        })();
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
